@@ -36,7 +36,7 @@ public class Timer : MonoBehaviour
 
     public void newFunctionToCall()
     {
-        Debug.Log("Something happens!");
+        Debug.Log("Turn switch!");
         resetTimer();
     }
 }
