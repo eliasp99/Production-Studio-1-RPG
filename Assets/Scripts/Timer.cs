@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 
     public IEnumerator timer()
     {
-        resetTimer();
+        SwitchTurns();
         while (true)
         {
             timerText.text = currentTime.ToString();
@@ -24,19 +24,14 @@ public class Timer : MonoBehaviour
             currentTime--; //Can change to currentTime = currentTime - interval
             if(currentTime <= 0)
             {
-                newFunctionToCall();
+                SwitchTurns();
             }
         }
     }
 
-    public void resetTimer()
-    {
-        currentTime = defaultTime;
-    }
-
-    public void newFunctionToCall()
+    public void SwitchTurns()
     {
         Debug.Log("Turn switch!");
-        resetTimer();
+        currentTime = defaultTime;
     }
 }
