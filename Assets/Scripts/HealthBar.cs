@@ -12,6 +12,7 @@ public class Healthbar : MonoBehaviour
 	public float health;
 	private float lerpSpeed = 0.05f;
 	public Healthbar healthbar;
+	public GameObject Character;
 
 	
 
@@ -38,6 +39,8 @@ public class Healthbar : MonoBehaviour
     public void Die()
     {
         healthbar.gameObject.SetActive(false);
+		Destroy(GameObject.FindWithTag("Enemy"));
+		
     }
 
     public void TakeDamage(float damage)
