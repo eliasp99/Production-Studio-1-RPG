@@ -8,10 +8,29 @@ public class Timer : MonoBehaviour
     public Text timerText;
     float currentTime;
     public float defaultTime;
-    // Start is called before the first frame update
+
+    public Button AttackButton;
+    public float turnCooldownDuration;
+    private float turnCooldownTimer = 0.0f;
+    private bool canClickButton = true;
+
+
     void Start()
     {
         StartCoroutine(timer());
+
+        AttackButton.interactable = true;
+    }
+
+    public void OnButtonClick()
+    {
+        if (canClickButton)
+        {
+            AttackButton.interactable = false;
+            canClickButton = false;
+
+            turnCooldownTimer = turnCooldownDuration;
+        }
     }
 
     public IEnumerator timer()
@@ -25,6 +44,20 @@ public class Timer : MonoBehaviour
             if(currentTime <= 0)
             {
                 SwitchTurns();
+            }
+        }
+    }
+
+    void Update()
+    {
+        if (!canClickButton)
+        {
+            turnCooldownTimer -= Time.deltaTime;
+
+            if (turnCooldownTimer <= 0.0f)
+            {
+                AttackButton.interactable = true;
+                canClickButton = true;
             }
         }
     }

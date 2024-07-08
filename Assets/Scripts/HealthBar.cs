@@ -12,11 +12,6 @@ public class Healthbar : MonoBehaviour
 	public float health;
 	private float lerpSpeed = 0.05f;
 	public Healthbar healthbar;
-	public GameObject Character;
-
-	
-
-
 
 	void Start()
 	{
@@ -34,13 +29,13 @@ public class Healthbar : MonoBehaviour
 		{
 			easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, health, lerpSpeed);
 		}
+
 	}
 
     public void Die()
     {
         healthbar.gameObject.SetActive(false);
-		Destroy(GameObject.FindWithTag("Enemy"));
-		
+		Destroy(GameObject.FindWithTag("Character"));
     }
 
     public void TakeDamage(float damage)
@@ -49,6 +44,8 @@ public class Healthbar : MonoBehaviour
 		if(health <=0)
 		{
 			Die();
+			Destroy(GameObject.FindWithTag("Timer"));
+			Destroy(GameObject.FindWithTag("AttackButton"));
 		}
 	}
 }
