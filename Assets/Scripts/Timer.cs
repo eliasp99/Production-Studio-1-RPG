@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour
     public float turnCooldownDuration;
     private float turnCooldownTimer = 0.0f;
     private bool canClickButton = true;
+    private int turnCount = 0;
+    
 
 
     void Start()
@@ -45,6 +47,11 @@ public class Timer : MonoBehaviour
             {
                 SwitchTurns();
                 AttackButton.interactable = false;
+                SwitchTurns();
+                {
+                    turnCount++;
+                }
+
             }
         }
     }
@@ -67,5 +74,16 @@ public class Timer : MonoBehaviour
     {
         Debug.Log("Turn switch!");
         currentTime = defaultTime;
+        {
+            if (turnCount % 2 == 0)
+            {
+                AttackButton.interactable = true;
+            }
+            else
+            {
+                AttackButton.interactable = false;
+            }
+        }
     }
+
 }
