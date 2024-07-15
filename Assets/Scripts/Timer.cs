@@ -2,56 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public Text timerText;
+    public TMP_Text timerText;
     float currentTime;
     public float defaultTime;
 
-    public Button AttackButton;
+    public Button attackButton;
     public float turnCooldownDuration;
     private float turnCooldownTimer = 0.0f;
     private bool canClickButton = true;
     private int turnCount = 0;
+    public TMP_Text turnLabel;
     
 
 
     void Start()
     {
-        StartCoroutine(timer());
+        currentTime = defaultTime;
+        StartCoroutine(TimerChange());
 
-        AttackButton.interactable = true;
+        attackButton.interactable = true;
     }
 
     public void OnButtonClick()
     {
         if (canClickButton)
         {
-            AttackButton.interactable = false;
+            attackButton.interactable = false;
             canClickButton = false;
 
             turnCooldownTimer = turnCooldownDuration;
         }
     }
 
-    public IEnumerator timer()
+    public IEnumerator TimerChange()
     {
-        SwitchTurns();
+        //SwitchTurns();
         while (true)
         {
-            timerText.text = currentTime.ToString();
+            timerText.text = "Time; " + currentTime.ToString();
             yield return new WaitForSeconds(1f); //Can change to whatever interval I want
             currentTime--; //Can change to currentTime = currentTime - interval
             if(currentTime <= 0)
             {
                 SwitchTurns();
-                AttackButton.interactable = false;
-                SwitchTurns();
-                {
-                    turnCount++;
-                }
-
             }
         }
     }
@@ -64,7 +61,7 @@ public class Timer : MonoBehaviour
 
             if (turnCooldownTimer <= 0.0f)
             {
-                AttackButton.interactable = true;
+                attackButton.interactable = true;
                 canClickButton = true;
             }
         }
@@ -73,15 +70,18 @@ public class Timer : MonoBehaviour
     public void SwitchTurns()
     {
         Debug.Log("Turn switch!");
+        turnCount++;
         currentTime = defaultTime;
         {
             if (turnCount % 2 == 0)
             {
-                AttackButton.interactable = true;
+                attackButton.interactable = true;
+                turnLabel.text = "Player's turn!";
             }
             else
             {
-                AttackButton.interactable = false;
+                attackButton.interactable = false;
+                turnLabel.text = "Enemy's turn!";
             }
         }
     }
