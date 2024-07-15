@@ -46,6 +46,7 @@ public class Healthbar : MonoBehaviour
 			Die();
 			Destroy(GameObject.FindWithTag("Timer"));
 			Destroy(GameObject.FindWithTag("AttackButton"));
+			Destroy(GameObject.FindWithTag("TurnLabel"));
 		}
 	}
 }

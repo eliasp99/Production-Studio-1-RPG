@@ -8,6 +8,8 @@ TagManager:
   - Timer
   - AttackButton
   - Character
+  - TurnLabel
+  - TimerText
   layers:
   - Default
   - TransparentFX

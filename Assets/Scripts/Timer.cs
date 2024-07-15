@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
         //SwitchTurns();
         while (true)
         {
-            timerText.text = "Time; " + currentTime.ToString();
+            timerText.text = "Time: " + currentTime.ToString();
             yield return new WaitForSeconds(1f); //Can change to whatever interval I want
             currentTime--; //Can change to currentTime = currentTime - interval
             if(currentTime <= 0)
