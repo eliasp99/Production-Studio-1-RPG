@@ -36,7 +36,7 @@ public class Timer : MonoBehaviour
             attackButton.interactable = false;
             canClickButton = false;
 
-            turnCooldownTimer = turnCooldownDuration;
+            turnCooldownTimer = turnCooldownDuration; 
         }
     }
 
@@ -74,6 +74,8 @@ public class Timer : MonoBehaviour
         Debug.Log("Turn switch!");
         turnCount++;
         currentTime = defaultTime;
+        StopAllCoroutines();
+        StartCoroutine(TimerChange());
 
         {
             if (turnCount % 2 == 0)
