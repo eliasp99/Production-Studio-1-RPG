@@ -10,6 +10,7 @@ TagManager:
   - Character
   - TurnLabel
   - TimerText
+  - MagicButton
   layers:
   - Default
   - TransparentFX
