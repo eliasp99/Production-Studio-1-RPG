@@ -629,6 +629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHealth
       objectReference: {fileID: 0}
+    - target: {fileID: 8098514530176441108, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
+      propertyPath: m_TagString
+      value: PlayerHealth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -760,7 +764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 44, y: 100}
+  m_AnchoredPosition: {x: 62, y: 93}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156161500
@@ -1559,6 +1563,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8572090322945953700, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}

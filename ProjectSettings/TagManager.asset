@@ -11,6 +11,7 @@ TagManager:
   - TurnLabel
   - TimerText
   - MagicButton
+  - PlayerHealth
   layers:
   - Default
   - TransparentFX

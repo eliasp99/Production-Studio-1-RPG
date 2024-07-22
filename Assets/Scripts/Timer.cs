@@ -80,13 +80,13 @@ public class Timer : MonoBehaviour
         StartCoroutine(TimerChange()); //Resets the timer to 5 and switches turns
 
         {
-            if (turnCount % 2 == 0)
+            if (turnCount % 2 == 0) //Player's turn
             {
                 attackButton.interactable = true;
                 magicButton.interactable = true;
                 turnLabel.text = "Player's turn!";
             }
-            else
+            else //Enemy's turn
             {
                 attackButton.interactable = false;
                 magicButton.interactable = false;
