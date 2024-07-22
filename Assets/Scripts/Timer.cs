@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Timer : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class Timer : MonoBehaviour
 
     public void OnButtonClick()
     {
+        
         if (canClickButton)
         {
             attackButton.interactable = false;
@@ -72,6 +74,7 @@ public class Timer : MonoBehaviour
         Debug.Log("Turn switch!");
         turnCount++;
         currentTime = defaultTime;
+
         {
             if (turnCount % 2 == 0)
             {
@@ -85,5 +88,4 @@ public class Timer : MonoBehaviour
             }
         }
     }
-
 }

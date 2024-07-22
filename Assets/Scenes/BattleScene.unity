@@ -762,6 +762,7 @@ GameObject:
   - component: {fileID: 1366468814}
   - component: {fileID: 1366468813}
   - component: {fileID: 1366468812}
+  - component: {fileID: 1366468815}
   m_Layer: 5
   m_Name: AttackButton
   m_TagString: AttackButton
@@ -883,6 +884,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366468810}
   m_CullTransparentMesh: 1
+--- !u!114 &1366468815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366468810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae82b1373f84f640ac943e7c6c09c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1413048414
 GameObject:
   m_ObjectHideFlags: 0
