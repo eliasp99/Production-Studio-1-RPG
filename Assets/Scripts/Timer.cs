@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
     private bool canClickButton = true;
     private int turnCount = 0;
     public TMP_Text turnLabel;
+    public bool playerHealth;
     
 
 
@@ -91,6 +92,11 @@ public class Timer : MonoBehaviour
                 attackButton.interactable = false;
                 magicButton.interactable = false;
                 turnLabel.text = "Enemy's turn!";
+                {
+                    playerHealth = GameObject.FindGameObjectWithTag("PlayerHealth").GetComponent<Healthbar>();
+                    
+                    
+                }
             }
         }
     }

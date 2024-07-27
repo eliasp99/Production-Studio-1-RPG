@@ -609,6 +609,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5451927169356469454, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5741552313121799660, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -616,6 +620,10 @@ PrefabInstance:
     - target: {fileID: 5741552313121799660, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378139643538790739, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
+      propertyPath: m_Value
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7846823536336492896, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1096,6 +1104,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11500000, guid: 1f76fdedbee253f468fd2b4bb10ab04e, type: 3}
+        m_TargetAssemblyTypeName: Healthbar, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1366468813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,6 +1476,7 @@ MonoBehaviour:
   magicButton: {fileID: 1516280120}
   turnCooldownDuration: 0
   turnLabel: {fileID: 1156161500}
+  playerHealth: 0
 --- !u!222 &1792178263
 CanvasRenderer:
   m_ObjectHideFlags: 0
