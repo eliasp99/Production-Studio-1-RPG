@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using System.Linq.Expressions;
+using JetBrains.Annotations;
 
 public class Timer : MonoBehaviour
 {
@@ -23,12 +24,15 @@ public class Timer : MonoBehaviour
     
 
 
+
     void Start()
     {
         currentTime = defaultTime;
         StartCoroutine(TimerChange());
 
         attackButton.interactable = true;
+
+        playerHealth = GameObject.FindGameObjectWithTag("PlayerHealth").GetComponent<Healthbar>();
     }
 
     public void OnButtonClick()
@@ -93,9 +97,20 @@ public class Timer : MonoBehaviour
                 magicButton.interactable = false;
                 turnLabel.text = "Enemy's turn!";
                 {
-                    playerHealth = GameObject.FindGameObjectWithTag("PlayerHealth").GetComponent<Healthbar>();
-                    
-                    
+
+                    GameObject otherObject = GameObject.Find("PlayerHealth");
+
+                    if (otherObject != null)
+                    {
+                        Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
+
+                        if (Healthbarcomponent != null)
+                        {
+                            Healthbarcomponent.TakeDamage(10);
+                        }
+
+                    }
+
                 }
             }
         }

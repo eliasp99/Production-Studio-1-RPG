@@ -13,21 +13,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        GameObject otherObject = GameObject.Find("PlayerHealth");
-
-        if (otherObject != null)
-        {
-            Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
-
-            if(Healthbarcomponent != null )
-            {
-                Healthbarcomponent.TakeDamage(10);
-            }
-
-
-
-
-        }
+        
     }
 
     

@@ -13,8 +13,10 @@ public class Healthbar : MonoBehaviour
 	public float health;
 	private float lerpSpeed = 0.05f;
 	public Healthbar healthbar;
+	
+    
 
-	void Start()
+    void Start()
 	{
 		health = maxHealth;
 	}
