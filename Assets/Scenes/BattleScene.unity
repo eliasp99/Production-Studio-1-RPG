@@ -1477,6 +1477,8 @@ MonoBehaviour:
   turnCooldownDuration: 0
   turnLabel: {fileID: 1156161500}
   playerHealth: 0
+  minTime: 1
+  maxTime: 5
 --- !u!222 &1792178263
 CanvasRenderer:
   m_ObjectHideFlags: 0

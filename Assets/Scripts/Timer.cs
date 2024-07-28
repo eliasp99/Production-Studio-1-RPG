@@ -21,6 +21,9 @@ public class Timer : MonoBehaviour
     private int turnCount = 0;
     public TMP_Text turnLabel;
     public bool playerHealth;
+    public float minTime = 1.0f;
+    public float maxTime = 5.0f;
+    
     
 
 
@@ -29,6 +32,8 @@ public class Timer : MonoBehaviour
     {
         currentTime = defaultTime;
         StartCoroutine(TimerChange());
+        
+
 
         attackButton.interactable = true;
 
@@ -60,6 +65,12 @@ public class Timer : MonoBehaviour
                 SwitchTurns();
             }
         }
+    }
+
+    public IEnumerator RandomTrigger()
+    {
+        float randomTime = Random.Range(minTime, maxTime);
+        yield return new WaitForSeconds(randomTime);
     }
 
     void Update()
@@ -96,22 +107,29 @@ public class Timer : MonoBehaviour
                 attackButton.interactable = false;
                 magicButton.interactable = false;
                 turnLabel.text = "Enemy's turn!";
-                {
+                
 
-                    GameObject otherObject = GameObject.Find("PlayerHealth");
+                    { StartCoroutine(RandomTrigger());
+                     
+                     
 
-                    if (otherObject != null)
-                    {
-                        Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
+                        { GameObject otherObject = GameObject.Find("PlayerHealth"); 
+                    
+                            if (otherObject != null)
+                            {
+                                Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
 
-                        if (Healthbarcomponent != null)
-                        {
-                            Healthbarcomponent.TakeDamage(10);
+                                if (Healthbarcomponent != null)
+                                {
+
+
+                                    {
+                                        Healthbarcomponent.TakeDamage(10);
+                                    }
+                                }
+                            }
                         }
-
                     }
-
-                }
             }
         }
     }
