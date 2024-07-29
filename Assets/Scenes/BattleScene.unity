@@ -1382,6 +1382,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1792178261}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: BeginMagic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1516280121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1479,6 +1491,8 @@ MonoBehaviour:
   playerHealth: 0
   minTime: 1
   maxTime: 5
+  currentMagic: 0
+  usingMagic: 0
 --- !u!222 &1792178263
 CanvasRenderer:
   m_ObjectHideFlags: 0

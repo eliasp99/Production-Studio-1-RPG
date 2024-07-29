@@ -23,6 +23,8 @@ public class Timer : MonoBehaviour
     public bool playerHealth;
     public float minTime = 1.0f;
     public float maxTime = 5.0f;
+    public int currentMagic = 0;
+    public bool usingMagic = false;
     
     
 
@@ -71,6 +73,28 @@ public class Timer : MonoBehaviour
     {
         float randomTime = Random.Range(minTime, maxTime);
         yield return new WaitForSeconds(randomTime);
+        GameObject otherObject = GameObject.Find("PlayerHealth");
+
+        if (otherObject != null)
+        {
+            Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
+
+            if (Healthbarcomponent != null)
+            {
+                {
+                    Healthbarcomponent.TakeDamage(10);
+                    SwitchTurns();
+                }
+            }
+        }
+    }
+
+    public void BeginMagic()
+    {
+        usingMagic = true;
+        currentMagic += 1;
+        Debug.Log(currentMagic);
+        //when the timer runs out, needs to check isUsingMagic true (if it is, go to enemy/player healthbar and do damage in relation to the current magic value), set current magic back to 0, switch turns
     }
 
     void Update()
@@ -88,7 +112,13 @@ public class Timer : MonoBehaviour
     }
 
     public void SwitchTurns()
-    {
+    { 
+        if (usingMagic == true)
+        {
+            usingMagic = false;
+            //Do damage
+            currentMagic = 0;
+        }
         Debug.Log("Turn switch!");
         turnCount++;
         currentTime = defaultTime;
@@ -107,29 +137,8 @@ public class Timer : MonoBehaviour
                 attackButton.interactable = false;
                 magicButton.interactable = false;
                 turnLabel.text = "Enemy's turn!";
-                
 
-                    { StartCoroutine(RandomTrigger());
-                     
-                     
-
-                        { GameObject otherObject = GameObject.Find("PlayerHealth"); 
-                    
-                            if (otherObject != null)
-                            {
-                                Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
-
-                                if (Healthbarcomponent != null)
-                                {
-
-
-                                    {
-                                        Healthbarcomponent.TakeDamage(10);
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    StartCoroutine(RandomTrigger());
             }
         }
     }
