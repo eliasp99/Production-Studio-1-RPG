@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour
     public float maxTime = 5.0f;
     public int currentMagic = 0;
     public bool usingMagic = false;
+    public TMP_Text MagicButtonTitle;
     
     
 
@@ -93,6 +94,8 @@ public class Timer : MonoBehaviour
     {
         usingMagic = true;
         currentMagic += 1;
+        MagicButtonTitle.text = currentMagic.ToString();
+        
         Debug.Log(currentMagic);
         //when the timer runs out, needs to check isUsingMagic true (if it is, go to enemy/player healthbar and do damage in relation to the current magic value), set current magic back to 0, switch turns
     }
@@ -130,12 +133,15 @@ public class Timer : MonoBehaviour
             {
                 attackButton.interactable = true;
                 magicButton.interactable = true;
+                MagicButtonTitle.text = "Magic";
                 turnLabel.text = "Player's turn!";
+                
             }
             else //Enemy's turn
             {
                 attackButton.interactable = false;
                 magicButton.interactable = false;
+                MagicButtonTitle.text = "Magic";
                 turnLabel.text = "Enemy's turn!";
 
                     StartCoroutine(RandomTrigger());
