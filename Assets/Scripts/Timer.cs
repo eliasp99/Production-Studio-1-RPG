@@ -96,6 +96,7 @@ public class Timer : MonoBehaviour
         currentMagic += 1;
         MagicButtonTitle.text = currentMagic.ToString();
         
+        
         Debug.Log(currentMagic);
         //when the timer runs out, needs to check isUsingMagic true (if it is, go to enemy/player healthbar and do damage in relation to the current magic value), set current magic back to 0, switch turns
     }
@@ -116,12 +117,13 @@ public class Timer : MonoBehaviour
 
     public void SwitchTurns()
     { 
-        if (usingMagic == true)
+        if (usingMagic == true) //If the player/enemy enabled the magic UI and built up damage
         {
-            usingMagic = false;
-            //Do damage
+            usingMagic = false; //Turn off the ability to use magic since their turn ends
+            //Then do the built-up damage
             currentMagic = 0;
         }
+
         Debug.Log("Turn switch!");
         turnCount++;
         currentTime = defaultTime;
