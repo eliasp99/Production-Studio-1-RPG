@@ -90,6 +90,8 @@ public class Timer : MonoBehaviour
         }
     }
 
+    
+
     public void BeginMagic()
     {
         usingMagic = true;
