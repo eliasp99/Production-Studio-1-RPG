@@ -149,6 +149,7 @@ public class Timer : MonoBehaviour
                 magicButton.interactable = false;
                 MagicButtonTitle.text = "Magic";
                 turnLabel.text = "Enemy's turn!";
+                
 
                     StartCoroutine(RandomTrigger());
             }
