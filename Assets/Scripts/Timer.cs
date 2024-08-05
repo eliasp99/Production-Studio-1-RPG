@@ -26,6 +26,7 @@ public class Timer : MonoBehaviour
     public int currentMagic = 0;
     public bool usingMagic = false;
     public TMP_Text MagicButtonTitle;
+    public Healthbar enemyHealthBar;
     
     
 
@@ -122,7 +123,8 @@ public class Timer : MonoBehaviour
         if (usingMagic == true) //If the player/enemy enabled the magic UI and built up damage
         {
             usingMagic = false; //Turn off the ability to use magic since their turn ends
-            //Then do the built-up damage
+            //Then do the built-up damage 
+            enemyHealthBar.TakeDamage(currentMagic);
             currentMagic = 0;
         }
 
