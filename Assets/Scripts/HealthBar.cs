@@ -13,6 +13,7 @@ public class Healthbar : MonoBehaviour
 	public float health;
 	private float lerpSpeed = 0.05f;
 	public Healthbar healthbar;
+	public PlayerController playerController;
 	
     
 
@@ -52,5 +53,5 @@ public class Healthbar : MonoBehaviour
 			Destroy(GameObject.FindWithTag("TurnLabel"));
 			Destroy(GameObject.FindWithTag("MagicButton"));
 		}
-	}
+    }
 }

@@ -10,17 +10,22 @@ public class PlayerController : MonoBehaviour
     public float rotateSpeed = 20f;
     public Timer timer;
     public bool inBattle;
+    public Canvas canvas;
 
 
     void Start()
     {
         playerController = GetComponent<CharacterController>();
+        canvas.GetComponent<Canvas>().enabled = false;
     }
 
     void Update()
     {
-        if (inBattle) 
+        if (inBattle)
+        {
+            canvas.GetComponent<Canvas>().enabled = true;
             return;
+        }
         
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), (0), Input.GetAxis("Vertical"));
         

@@ -51,6 +51,7 @@ public class Timer : MonoBehaviour
         //On collision - player and enemy colliders - Enable canvas and battle coroutine
         yield return new WaitForSeconds(2);
         StartCoroutine(TimerChange());
+
         //Enable battle UI - Alpha
     }
 
@@ -123,6 +124,8 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        
+        
         if (!canClickButton)
         {
             turnCooldownTimer -= Time.deltaTime;
