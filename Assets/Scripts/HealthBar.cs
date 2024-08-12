@@ -52,6 +52,7 @@ public class Healthbar : MonoBehaviour
 			Destroy(GameObject.FindWithTag("AttackButton"));
 			Destroy(GameObject.FindWithTag("TurnLabel"));
 			Destroy(GameObject.FindWithTag("MagicButton"));
+			playerController.inBattle = false;
 		}
     }
 }

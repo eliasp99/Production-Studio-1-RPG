@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour
     public Timer timer;
     public bool inBattle;
     public Canvas canvas;
+    public Healthbar healthbar;
+    
 
 
     void Start()
     {
         playerController = GetComponent<CharacterController>();
-        canvas.GetComponent<Canvas>().enabled = false;
+        canvas.GetComponent<Canvas>().enabled = false; //Should only enable after two seconds - message saying 'Get Ready!' enables during this time
     }
 
     void Update()
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour
         if (inBattle)
         {
             canvas.GetComponent<Canvas>().enabled = true;
-            return;
+            return; //Establishes a barrier - loops the script from this point
         }
         
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), (0), Input.GetAxis("Vertical"));

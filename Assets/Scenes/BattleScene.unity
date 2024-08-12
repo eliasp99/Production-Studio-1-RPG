@@ -725,6 +725,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1023940435}
     - target: {fileID: 7378139643538790739, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: m_Value
       value: 100
@@ -1185,6 +1189,7 @@ MonoBehaviour:
   timer: {fileID: 1792178261}
   inBattle: 0
   canvas: {fileID: 1194299642}
+  healthbar: {fileID: 1277607724}
 --- !u!143 &1023940436
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1535,6 +1540,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1920785246379110585, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
   m_PrefabInstance: {fileID: 729217947}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1277607724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
+  m_PrefabInstance: {fileID: 729217947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd30d47bb97cc1b44b2284bbdb1395fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366468810
 GameObject:
   m_ObjectHideFlags: 0
