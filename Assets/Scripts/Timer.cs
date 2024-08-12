@@ -27,6 +27,7 @@ public class Timer : MonoBehaviour
     public bool usingMagic = false;
     public TMP_Text MagicButtonTitle;
     public Healthbar enemyHealthBar;
+    public PlayerController playerController;
     
     
 
@@ -34,14 +35,30 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
+        
         currentTime = defaultTime;
-        StartCoroutine(TimerChange());
+        
         
 
 
         attackButton.interactable = true;
 
         playerHealth = GameObject.FindGameObjectWithTag("PlayerHealth").GetComponent<Healthbar>();
+    }
+
+    public IEnumerator StartBattle()
+    {
+        //On collision - player and enemy colliders - Enable canvas and battle coroutine
+        yield return new WaitForSeconds(2);
+        StartCoroutine(TimerChange());
+        //Enable battle UI - Alpha
+    }
+
+    public void FinishBattle()
+    {
+        //On battle end - Stop coroutine
+        StopAllCoroutines();
+        playerController.inBattle = false;
     }
 
     public void OnButtonClick()

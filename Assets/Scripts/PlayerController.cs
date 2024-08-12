@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 5f;
     public float rotateSpeed = 20f;
+    public Timer timer;
+    public bool inBattle;
 
 
     void Start()
@@ -16,7 +18,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    { 
+    {
+        if (inBattle) 
+            return;
+        
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), (0), Input.GetAxis("Vertical"));
         
         playerController.Move(move * Time.deltaTime * moveSpeed);
@@ -35,6 +40,15 @@ public class PlayerController : MonoBehaviour
         {
             float rotationAngle = horizontalInput * rotateSpeed * Time.deltaTime;
             transform.Rotate(Vector3.up, rotationAngle);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Character"))
+        {
+            timer.StartCoroutine(timer.StartBattle());
+            inBattle = true;
         }
     }
 }
