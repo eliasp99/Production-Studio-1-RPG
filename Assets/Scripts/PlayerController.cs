@@ -13,12 +13,14 @@ public class PlayerController : MonoBehaviour
     public Canvas canvas;
     public Healthbar healthbar;
     
+    
 
 
     void Start()
     {
         playerController = GetComponent<CharacterController>();
         canvas.GetComponent<Canvas>().enabled = false; //Should only enable after two seconds - message saying 'Get Ready!' enables during this time
+        
     }
 
     void Update()
