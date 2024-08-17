@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 335470885}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
@@ -318,7 +318,10 @@ Transform:
   m_LocalPosition: {x: -38, y: 0, z: -44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7427160684906078454}
+  - {fileID: 4542020460857049608}
+  - {fileID: 6078186735938031839}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341372285
@@ -1326,6 +1329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758767582}
   - component: {fileID: 758767581}
+  - component: {fileID: 758767583}
   m_Layer: 0
   m_Name: Third Person Camera
   m_TagString: Untagged
@@ -1456,6 +1460,36 @@ Transform:
   - {fileID: 1679412643}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758767583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758767580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0.8
+  m_DampingWhenOccluded: 0.8
+  m_OptimalTargetDistance: 0
 --- !u!1 &779895383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,7 +1890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22280458, y: -0.000000027062947, z: 0.000000006185225, w: 0.9748632}
+  m_LocalRotation: {x: 0.22280458, y: 0.000000027062947, z: -0.000000006185225, w: 0.9748632}
   m_LocalPosition: {x: 0, y: 6.084444, z: -0.6968012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2176,7 +2210,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1023940436}
+  cam: {fileID: 963194228}
   speed: 6
+  turnSmoothTime: 0.1
 --- !u!1 &1042575323
 GameObject:
   m_ObjectHideFlags: 3
@@ -2248,7 +2284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042575323}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22810714, y: -0.000000016752756, z: 0.0000000039248986, w: 0.97363603}
+  m_LocalRotation: {x: 0.22810714, y: 0.000000016752756, z: -0.0000000039248986, w: 0.97363603}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3744,7 +3780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679412641}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21040644, y: -0.000000025231795, z: 0.0000000054304996, w: 0.977614}
+  m_LocalRotation: {x: 0.21040644, y: 0.000000025231794, z: -0.0000000054304996, w: 0.977614}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4515,15 +4551,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4542020460857482792}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.464497, y: 0.050599217, z: 5.534874}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.464497, y: 0.050599217, z: 49.534874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4542020460857049612}
   - {fileID: 4542020460857049600}
   - {fileID: 1429722261}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 335470887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4542020460857049612
 Transform:
@@ -4592,7 +4628,7 @@ GameObject:
   - component: {fileID: 4542020460847967720}
   m_Layer: 0
   m_Name: ancient_ruins_02
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4778,8 +4814,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6078186735938063615}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.723937, y: 0.0506078, z: -8.690693}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.276062, y: 0.0506078, z: 35.309307}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4792,7 +4828,7 @@ Transform:
   - {fileID: 6078186735938031833}
   - {fileID: 1021205698}
   - {fileID: 6078186735938031831}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 335470887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6078186735938063607
 GameObject:
@@ -4882,7 +4918,7 @@ GameObject:
   - component: {fileID: 6078186735945465663}
   m_Layer: 0
   m_Name: ancient_ruins_02 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5236,8 +5272,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7427160684906249430}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.052469, y: 0.17255862, z: 6.129259}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.052467, y: 0.17255862, z: 50.129257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5251,7 +5287,7 @@ Transform:
   - {fileID: 1721832866}
   - {fileID: 7427160684906078456}
   - {fileID: 102556188}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 335470887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7427160684906078456
 Transform:
@@ -5314,7 +5350,7 @@ GameObject:
   - component: {fileID: 7427160684896718614}
   m_Layer: 0
   m_Name: ancient_ruins_01
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5585,8 +5621,5 @@ SceneRoots:
   - {fileID: 5484835957028630991}
   - {fileID: 388075930}
   - {fileID: 335470887}
-  - {fileID: 7427160684906078454}
-  - {fileID: 4542020460857049608}
   - {fileID: 2025009824}
-  - {fileID: 6078186735938031839}
   - {fileID: 758767582}

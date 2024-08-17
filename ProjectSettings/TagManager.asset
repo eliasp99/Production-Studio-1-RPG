@@ -12,6 +12,7 @@ TagManager:
   - TimerText
   - MagicButton
   - PlayerHealth
+  - Ground
   layers:
   - Default
   - TransparentFX
