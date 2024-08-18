@@ -10,8 +10,12 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+    private Animator animator;
 
-   
+    void Start()
+    {
+        animator= GetComponent<Animator>();
+    }
     void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -27,5 +31,16 @@ public class ThirdPersonMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
+        
+        if (direction != Vector3.zero)
+        {
+            animator.SetBool("IsRunning", true);
+        }
+
+        else
+        {
+            animator.SetBool("IsRunning", false);
+        }
+
     }
 }

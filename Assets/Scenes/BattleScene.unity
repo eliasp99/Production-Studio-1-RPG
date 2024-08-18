@@ -1281,7 +1281,7 @@ PrefabInstance:
     - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: playerController
       value: 
-      objectReference: {fileID: 1023940435}
+      objectReference: {fileID: 0}
     - target: {fileID: 7378139643538790739, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: m_Value
       value: 100
@@ -1408,7 +1408,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: -180
     m_MaxValue: 180
     m_Wrap: 1
@@ -2141,24 +2141,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8572090322945953700, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
   m_PrefabInstance: {fileID: 3701481613396629414}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1023940435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023940432}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 493964c4020e234479eceab34c17b092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rotateSpeed: 100
-  timer: {fileID: 1792178261}
-  inBattle: 0
-  canvas: {fileID: 1194299642}
-  healthbar: {fileID: 1277607724}
 --- !u!143 &1023940436
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2185,18 +2167,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.94, z: 0}
---- !u!114 &1023940439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023940432}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df63c1e86bf916a43a34d4aec56400e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1023940440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,17 +2731,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1920785246379110585, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
   m_PrefabInstance: {fileID: 729217947}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1277607724 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
-  m_PrefabInstance: {fileID: 729217947}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd30d47bb97cc1b44b2284bbdb1395fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1366468810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3957,7 +3916,7 @@ MonoBehaviour:
   usingMagic: 0
   MagicButtonTitle: {fileID: 499677442}
   enemyHealthBar: {fileID: 1477910029}
-  playerController: {fileID: 1023940435}
+  playerController: {fileID: 0}
 --- !u!222 &1792178263
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4343,6 +4302,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6998206157094267103, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0022206402
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998206157094267103, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.068294086
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547338135380251220, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bab2d92b011aa5e45b57ebe95e2c443a, type: 2}
     - target: {fileID: 8572090322945953700, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4397,12 +4368,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1023940436}
-    - targetCorrespondingSourceObject: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1023940435}
-    - targetCorrespondingSourceObject: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1023940439}
     - targetCorrespondingSourceObject: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1023940440}
