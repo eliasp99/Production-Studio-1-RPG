@@ -1890,7 +1890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22280458, y: 0.000000027062947, z: -0.000000006185225, w: 0.9748632}
+  m_LocalRotation: {x: 0.22280458, y: -0.0000000040026933, z: 9.1481395e-10, w: 0.9748632}
   m_LocalPosition: {x: 0, y: 6.084444, z: -0.6968012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2258,7 +2258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042575323}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22810714, y: 0.000000016752756, z: -0.0000000039248986, w: 0.97363603}
+  m_LocalRotation: {x: 0.22810714, y: -0.000000016752756, z: 0.0000000039248986, w: 0.97363603}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3924,13 +3924,13 @@ MonoBehaviour:
   magicButton: {fileID: 1516280120}
   turnCooldownDuration: 0
   turnLabel: {fileID: 1156161500}
-  playerHealth: 0
   minTime: 1
   maxTime: 5
   currentMagic: 0
   usingMagic: 0
   MagicButtonTitle: {fileID: 499677442}
   enemyHealthBar: {fileID: 1477910029}
+  playerHealth: {fileID: 1277607724}
   playerController: {fileID: 0}
 --- !u!222 &1792178263
 CanvasRenderer:

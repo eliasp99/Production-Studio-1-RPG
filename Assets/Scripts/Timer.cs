@@ -20,13 +20,13 @@ public class Timer : MonoBehaviour
     private bool canClickButton = true;
     private int turnCount = 0;
     public TMP_Text turnLabel;
-    public bool playerHealth;
     public float minTime = 1.0f;
     public float maxTime = 5.0f;
     public int currentMagic = 0;
     public bool usingMagic = false;
     public TMP_Text MagicButtonTitle;
     public Healthbar enemyHealthBar;
+    public Healthbar playerHealth;
     public PlayerController playerController;
     
     
@@ -35,14 +35,8 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        
         currentTime = defaultTime;
-        
-        
-
-
         attackButton.interactable = true;
-
         playerHealth = GameObject.FindGameObjectWithTag("PlayerHealth").GetComponent<Healthbar>();
     }
 
@@ -95,14 +89,37 @@ public class Timer : MonoBehaviour
         yield return new WaitForSeconds(randomTime);
         GameObject otherObject = GameObject.Find("PlayerHealth");
 
-        if (otherObject != null)
-        {
-            Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
+        int action = Random.Range(0, 1);
 
-            if (Healthbarcomponent != null)
+        if (action == 0)
+        {
+            if (otherObject != null)
             {
+                Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
+
+                if (Healthbarcomponent != null)
                 {
-                    Healthbarcomponent.TakeDamage(10);
+                    {
+                        Healthbarcomponent.TakeDamage(10);
+                        SwitchTurns();
+                    }
+                }
+            }
+        }
+
+        if (action == 1)
+        {
+            BeginMagic();
+
+            if (otherObject != null)
+            {
+                Healthbar Healthbarcomponent = otherObject.GetComponent<Healthbar>();
+                
+                if (usingMagic == true) //If the player/enemy enabled the magic UI and built up damage
+                {
+                    usingMagic = false; //Turn off the ability to use magic since their turn ends
+                    enemyHealthBar.TakeDamage(currentMagic); //Then do the built-up damage 
+                    currentMagic = 0;
                     SwitchTurns();
                 }
             }
