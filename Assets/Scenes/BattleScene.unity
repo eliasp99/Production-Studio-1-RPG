@@ -1890,7 +1890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22280458, y: -0.000000027062947, z: 0.000000006185225, w: 0.9748632}
+  m_LocalRotation: {x: 0.22280458, y: 0.000000027062947, z: -0.000000006185225, w: 0.9748632}
   m_LocalPosition: {x: 0, y: 6.084444, z: -0.6968012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2187,24 +2187,6 @@ MonoBehaviour:
   inBattle: 0
   canvas: {fileID: 1194299642}
   healthbar: {fileID: 1277607724}
---- !u!114 &1023940442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023940432}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 493964c4020e234479eceab34c17b092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rotateSpeed: 20
-  timer: {fileID: 1792178261}
-  inBattle: 0
-  canvas: {fileID: 1194299642}
-  healthbar: {fileID: 1277607724}
 --- !u!1 &1042575323
 GameObject:
   m_ObjectHideFlags: 3
@@ -2276,7 +2258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042575323}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22810714, y: -0.000000016752756, z: 0.0000000039248986, w: 0.97363603}
+  m_LocalRotation: {x: 0.22810714, y: 0.000000016752756, z: -0.0000000039248986, w: 0.97363603}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3772,7 +3754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679412641}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21040644, y: -0.000000025231795, z: 0.0000000054304996, w: 0.977614}
+  m_LocalRotation: {x: 0.21040644, y: 0.000000025231794, z: -0.0000000054304996, w: 0.977614}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4404,9 +4386,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1023940440}
-    - targetCorrespondingSourceObject: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1023940442}
   m_SourcePrefab: {fileID: 100100000, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
 --- !u!95 &4542020460847967720
 Animator:

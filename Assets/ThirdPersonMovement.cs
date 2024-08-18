@@ -27,7 +27,9 @@ public class ThirdPersonMovement : MonoBehaviour
         if (inBattle)
         {
             canvas.GetComponent<Canvas>().enabled = true;
+            animator.SetBool("IsRunning", false);
             return; //Establishes a barrier - loops the script from this point
+
         }
 
         float horizontal = Input.GetAxisRaw("Horizontal");
