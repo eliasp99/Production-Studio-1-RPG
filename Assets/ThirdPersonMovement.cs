@@ -12,12 +12,24 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
     private Animator animator;
 
+    public Timer timer;
+    public bool inBattle;
+    public Canvas canvas;
+    public Healthbar healthbar;
+
     void Start()
     {
         animator= GetComponent<Animator>();
+        canvas.GetComponent<Canvas>().enabled = false; //Should only enable after two seconds - message saying 'Get Ready!' enables during this time
     }
     void Update()
     {
+        if (inBattle)
+        {
+            canvas.GetComponent<Canvas>().enabled = true;
+            return; //Establishes a barrier - loops the script from this point
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -41,6 +53,14 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             animator.SetBool("IsRunning", false);
         }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Character"))
+        {
+            timer.StartCoroutine(timer.StartBattle());
+            inBattle = true;
+        }
     }
 }
