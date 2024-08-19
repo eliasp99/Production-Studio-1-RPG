@@ -14,12 +14,17 @@ public class Healthbar : MonoBehaviour
 	private float lerpSpeed = 0.05f;
 	public Healthbar healthbar;
 	public ThirdPersonMovement playerController;
-	
+	Animator animator;
+	public Button attackButton;
+
     
+
+
 
     void Start()
 	{
 		health = maxHealth;
+
 	}
 
 	void Update()
@@ -40,20 +45,19 @@ public class Healthbar : MonoBehaviour
     {
         healthbar.gameObject.SetActive(false);
 		Destroy(GameObject.FindWithTag("Character"));
-		playerController.ToggleBattleCam(false);
+		playerController.battleCam.gameObject.SetActive(false);
     }
 
     public void TakeDamage(float damage)
 	{
 		health -= damage;
-		if(health <=0)
+        if (health <=0)
 		{
 			Die();
 			Destroy(GameObject.FindWithTag("Timer"));
 			Destroy(GameObject.FindWithTag("AttackButton"));
 			Destroy(GameObject.FindWithTag("TurnLabel"));
 			Destroy(GameObject.FindWithTag("MagicButton"));
-			playerController.inBattle = false;
-		}
+        }
     }
 }

@@ -10,7 +10,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
-    private Animator animator;
+    public Animator animator;
 
     public Timer timer;
     public bool inBattle;
@@ -18,6 +18,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public Healthbar healthbar;
     public GameObject battleCam;
     public GameObject overworldCam;
+    public bool isAttacking;
 
     void Start()
     {
@@ -73,4 +74,9 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         battleCam.SetActive(active);
     }
+
+    
+           
+    
+
 }

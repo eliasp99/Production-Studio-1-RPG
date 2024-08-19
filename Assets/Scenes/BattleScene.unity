@@ -1279,6 +1279,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
+      propertyPath: attackButton
+      value: 
+      objectReference: {fileID: 1366468812}
+    - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1023940440}
@@ -2183,12 +2187,19 @@ MonoBehaviour:
   cam: {fileID: 963194228}
   speed: 6
   turnSmoothTime: 0.1
+  animator: {fileID: 1023940441}
   timer: {fileID: 1792178261}
   inBattle: 0
   canvas: {fileID: 1194299642}
   healthbar: {fileID: 1277607724}
   battleCam: {fileID: 2025009822}
   overworldCam: {fileID: 758767580}
+  isAttacking: 0
+--- !u!95 &1023940441 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7547338135380251220, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
+  m_PrefabInstance: {fileID: 3701481613396629414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1042575323
 GameObject:
   m_ObjectHideFlags: 3
@@ -4717,7 +4728,7 @@ PrefabInstance:
     - target: {fileID: 7179786304536642087, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
       propertyPath: playerController
       value: 
-      objectReference: {fileID: 1023940440}
+      objectReference: {fileID: 0}
     - target: {fileID: 7590595233244104666, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
       propertyPath: m_Name
       value: Enemy
