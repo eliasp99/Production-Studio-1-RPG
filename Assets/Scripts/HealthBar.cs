@@ -13,7 +13,7 @@ public class Healthbar : MonoBehaviour
 	public float health;
 	private float lerpSpeed = 0.05f;
 	public Healthbar healthbar;
-	public PlayerController playerController;
+	public ThirdPersonMovement playerController;
 	
     
 
@@ -40,6 +40,7 @@ public class Healthbar : MonoBehaviour
     {
         healthbar.gameObject.SetActive(false);
 		Destroy(GameObject.FindWithTag("Character"));
+		playerController.ToggleBattleCam(false);
     }
 
     public void TakeDamage(float damage)

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Healthbar healthbar;
     
     
+    
 
 
     void Start()
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             timer.StartCoroutine(timer.StartBattle());
             inBattle = true;
+            
         }
     }
 }

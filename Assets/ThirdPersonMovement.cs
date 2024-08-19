@@ -16,6 +16,8 @@ public class ThirdPersonMovement : MonoBehaviour
     public bool inBattle;
     public Canvas canvas;
     public Healthbar healthbar;
+    public GameObject battleCam;
+    public GameObject overworldCam;
 
     void Start()
     {
@@ -63,6 +65,12 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             timer.StartCoroutine(timer.StartBattle());
             inBattle = true;
+            ToggleBattleCam(true);
         }
+    }
+
+    public void ToggleBattleCam(bool active)
+    {
+        battleCam.SetActive(active);
     }
 }

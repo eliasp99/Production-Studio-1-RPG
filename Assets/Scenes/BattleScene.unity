@@ -1281,7 +1281,7 @@ PrefabInstance:
     - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: playerController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1023940440}
     - target: {fileID: 7378139643538790739, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: m_Value
       value: 100
@@ -1890,7 +1890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22280458, y: -0.0000000040026933, z: 9.1481395e-10, w: 0.9748632}
+  m_LocalRotation: {x: 0.22280458, y: 0.000000027062947, z: -0.000000006185225, w: 0.9748632}
   m_LocalPosition: {x: 0, y: 6.084444, z: -0.6968012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2187,6 +2187,8 @@ MonoBehaviour:
   inBattle: 0
   canvas: {fileID: 1194299642}
   healthbar: {fileID: 1277607724}
+  battleCam: {fileID: 2025009822}
+  overworldCam: {fileID: 758767580}
 --- !u!1 &1042575323
 GameObject:
   m_ObjectHideFlags: 3
@@ -2258,7 +2260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042575323}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22810714, y: -0.000000016752756, z: 0.0000000039248986, w: 0.97363603}
+  m_LocalRotation: {x: 0.22810714, y: 0.000000016752756, z: -0.0000000039248986, w: 0.97363603}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4198,14 +4200,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025009822}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12152833, y: 0.7247594, z: -0.13590008, w: 0.66444397}
-  m_LocalPosition: {x: -5.2, y: 2.7, z: 10.61}
+  m_LocalRotation: {x: 0.051940236, y: -0.7051966, z: 0.051940236, w: 0.7051966}
+  m_LocalPosition: {x: 3.46, y: 1.9, z: 2.0999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 967486492}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 21.007, y: 94.922, z: -0.272}
+  m_Father: {fileID: 1023940434}
+  m_LocalEulerAnglesHint: {x: 8.425, y: -90, z: 0}
 --- !u!1 &2138289248
 GameObject:
   m_ObjectHideFlags: 3
@@ -4379,6 +4381,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8572090322945953700, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815449928}
+    - targetCorrespondingSourceObject: {fileID: 8572090322945953700, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2025009824}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4377975573663061180, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       insertIndex: -1
@@ -4709,6 +4714,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7179786304536642087, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1023940440}
     - target: {fileID: 7590595233244104666, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -5601,5 +5610,4 @@ SceneRoots:
   - {fileID: 5484835957028630991}
   - {fileID: 388075930}
   - {fileID: 335470887}
-  - {fileID: 2025009824}
   - {fileID: 758767582}
