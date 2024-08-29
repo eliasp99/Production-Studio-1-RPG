@@ -13,6 +13,7 @@ TagManager:
   - MagicButton
   - PlayerHealth
   - Ground
+  - Character2
   layers:
   - Default
   - TransparentFX
