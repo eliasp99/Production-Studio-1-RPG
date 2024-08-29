@@ -2178,7 +2178,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.94, z: 0}
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!114 &1023940440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4359,7 +4359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8572090322945953700, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8572090322945953700, guid: 87fa3ff7c3a20f842a93b630f586fc20, type: 3}
       propertyPath: m_LocalPosition.z
