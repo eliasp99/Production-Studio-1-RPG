@@ -1279,6 +1279,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1792178261}
+    - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: battleCam
       value: 
       objectReference: {fileID: 2025009822}
@@ -4731,6 +4735,18 @@ PrefabInstance:
     - target: {fileID: 7134360348762273302, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179786304536642087, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179786304536642087, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
+      propertyPath: battleCam
+      value: 
+      objectReference: {fileID: 2025009822}
+    - target: {fileID: 7179786304536642087, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
+      propertyPath: maxHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7179786304536642087, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
       propertyPath: playerController
