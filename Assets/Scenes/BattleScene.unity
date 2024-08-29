@@ -4751,7 +4751,7 @@ PrefabInstance:
     - target: {fileID: 7179786304536642087, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
       propertyPath: playerController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1023940440}
     - target: {fileID: 7590595233244104666, guid: 9d9a85fd26085d848832932b696c0bf4, type: 3}
       propertyPath: m_Name
       value: Enemy
