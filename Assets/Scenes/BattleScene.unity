@@ -1279,6 +1279,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
+      propertyPath: battleCam
+      value: 
+      objectReference: {fileID: 2025009822}
+    - target: {fileID: 5841996599277160697, guid: 6ed99b3e58a349c40afee6c761b80456, type: 3}
       propertyPath: attackButton
       value: 
       objectReference: {fileID: 1366468812}
@@ -1894,7 +1898,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22280458, y: -0.000000027062947, z: 0.000000006185225, w: 0.9748632}
+  m_LocalRotation: {x: 0.22280458, y: -0.0000000040026933, z: 9.1481395e-10, w: 0.9748632}
   m_LocalPosition: {x: 0, y: 6.084444, z: -0.6968012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3767,7 +3771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679412641}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21040644, y: -0.000000025231795, z: 0.0000000054304996, w: 0.977614}
+  m_LocalRotation: {x: 0.21040644, y: 0.000000025231794, z: -0.0000000054304996, w: 0.977614}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3940,11 +3944,14 @@ MonoBehaviour:
   minTime: 1
   maxTime: 5
   currentMagic: 0
+  enemyCurrentMagic: 0
   usingMagic: 0
+  enemyUsingMagic: 0
   MagicButtonTitle: {fileID: 499677442}
   enemyHealthBar: {fileID: 1477910029}
   playerHealth: {fileID: 1277607724}
   playerController: {fileID: 0}
+  battleCam: {fileID: 2025009822}
 --- !u!222 &1792178263
 CanvasRenderer:
   m_ObjectHideFlags: 0

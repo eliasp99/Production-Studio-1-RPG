@@ -16,6 +16,8 @@ public class Healthbar : MonoBehaviour
 	public ThirdPersonMovement playerController;
 	Animator animator;
 	public Button attackButton;
+	
+	
 
     
 
@@ -45,7 +47,6 @@ public class Healthbar : MonoBehaviour
     {
         healthbar.gameObject.SetActive(false);
 		Destroy(GameObject.FindWithTag("Character"));
-		playerController.battleCam.gameObject.SetActive(false);
     }
 
     public void TakeDamage(float damage)

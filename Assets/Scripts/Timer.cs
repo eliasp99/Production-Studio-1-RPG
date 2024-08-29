@@ -30,6 +30,7 @@ public class Timer : MonoBehaviour
     public Healthbar enemyHealthBar;
     public Healthbar playerHealth;
     public PlayerController playerController;
+    public GameObject battleCam;
     
     
 
@@ -57,6 +58,7 @@ public class Timer : MonoBehaviour
         //On battle end - Stop coroutine
         StopAllCoroutines();
         playerController.inBattle = false;
+        battleCam.SetActive(false);
     }
 
     public void OnButtonClick()
